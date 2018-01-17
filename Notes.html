@@ -1,0 +1,74 @@
+@@ -1,121 +1,50 @@
+<!doctype html>
+<html id="visdown" lang="en">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Visdown - Markdown for Visualisation</title>
+    <meta name="description" content="Create Simple Visualisation Charts with Markdown">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="lib/vega.min.js"></script>
+    <script src="lib/vega-lite.min.js"></script>
+    <script src="lib/vega-embed.min.js"></script>
+    <script src="lib/marked.min.js"></script>
+    <script src="lib/yaml.min.js"></script>
+
+    <style>
+      #visdown-output {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      #visdown-input {
+        display: none;
+      }
+    </style>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Visdown - Markdown for Visualisation</title>
+  <meta name="description" content="Create Simple Visualisation Charts with Markdown">
+
+  <script src="lib/vega.min.js"></script>
+  <script src="lib/vega-lite.min.js"></script>
+  <script src="lib/vega-embed.min.js"></script>
+  <script src="lib/marked.min.js"></script>
+  <script src="lib/yaml.min.js"></script>
+
+  <style>
+    #visdown-output {max-width: 800px; margin: 0 auto;}
+    #visdown-input {display: none;}
+  </style>
+</head>
+<body>
+
+<div id="visdown-input">
+  # Chetna
+Notes Visualisation
+
+  ```vis
+  data:
+    url: https://raw.githubusercontent.com/amitkaps/visdown/master/data/notes.csv
+  mark: bar
+  width: 600
+  height: 400
+  encoding:
+    x:
+      field: year
+      type: ordinal
+    y:
+      field: number
+      type: quantitative
+    color:
+      field: denom
+  ```
+
+</div>
+<div id="visdown-output"></div>
+
+<script src="visdown.js"></script>
+
+</body>
